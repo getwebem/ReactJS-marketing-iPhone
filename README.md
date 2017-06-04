@@ -1,7 +1,7 @@
 
-# React App
+# HighTech Inc
 ### Technologies Used
-#### HTML5, CSS3, Bootstrap 3.3.7, React.js 15.5
+#### HTML5, CSS3, Bootstrap 3.3, React.js 15.5
  - Run  :  `git clone https://github.com/getwebem/reactProj.git`
  - Run  :  `cd reactProj`
  - Run :  `Brackets .`
