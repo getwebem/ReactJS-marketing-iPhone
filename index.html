@@ -18,19 +18,6 @@
 	</head>
 	<body>
 	<div id="app"></div>
-
-    <div class="container">
-   
-      <div class="row">
-        main content
-      </div>
-
-      <hr>
-
-      <footer class="navbar navbar-inverse">
-        <p>&copy; 2017 HighTech Inc &middot; All Rights Reserved</p>
-      </footer>
-    </div> 
 	
 	<script type="text/babel">
     //NavBar Component
@@ -75,14 +62,43 @@
       <div className="container">
         <h1>Marketing iPhone 7</h1>
         <p>Social proof non-disclosure agreement twitter interaction design MVP user experience crowdfunding supply chain lean startup. Holy grail ecosystem business-to-business android innovator product management hypotheses responsive web design influencer series A financing lean startup research  development..</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
                 )
             }
         });
 
+ //Homepage Component
+    var PageHome = React.createClass({
+        render: function(){
+            return(
+            <div className='container'>
+              <div className="row">
+               <div className='col-md-8 col-md-offset-2'>
+                <p>Value proposition incubator mass market market channels. Handshake ecosystem virality supply chain creative scrum project termsheet gamification research development. First mover advantage series A financing iPad infographic market leverage alpha crowdsource ramen incubator. Non-disclosure agreement launch party pivot technology interaction design niche market hackathon alpha bandwidth traction influencer business-to-consumer analytics. Rockstar handshake gen-z buyer branding. Influencer founders direct mailing burn rate buyer iPhone assets scrum project venture rockstar. Ownership return on investment lean startup network effects A/B testing branding. Buyer business model canvas channels. Scrum project startup lean startup angel investor gen-z business-to-consumer interaction design venture ownership seed round deployment growth hacking pivot business plan. Validation advisor agile development.</p>
+                <p>Supply chain influencer long tail angel investor hackathon user experience handshake iPad disruptive traction return on investment innovator MVP. Vesting period alpha twitter agile development product management business model canvas sales. Sales pitch crowdsource deployment return on investment marketing client hypotheses. Holy grail ecosystem graphical user interface alpha iPhone seed money learning curve handshake channels. Market prototype termsheet holy grail. Prototype series A financing investor termsheet interaction design responsive web design. Facebook gamification vesting period startup buyer iPhone freemium prototype. User experience partner network accelerator seed money termsheet graphical user interface pitch direct mailing advisor release venture. Crowdsource user experience iPhone creative market. Bootstrapping equity return on investment.</p>
+                <p>Client niche market twitter. Prototype influencer incubator infographic scrum project. Hackathon MVP sales startup termsheet business model canvas. Interaction design pitch deployment paradigm shift value proposition series A financing client founders lean startup first mover advantage beta. Scrum project value proposition focus burn rate user experience churn rate hypotheses accelerator learning curve funding buyer traction. Iteration incubator facebook leverage learning curve startup lean startup responsive web design strategy customer deployment network effects MVP. Burn rate return on investment venture infrastructure paradigm shift mass market innovator. Facebook series A financing advisor stock branding ownership equity crowdfunding founders freemium deployment disruptive direct mailing research development. Investor strategy sales rockstar infrastructure user experience deployment analytics business plan validation iPad. Handshake infographic deployment gamification creative investor user experience lean startup product management twitter freemium leverage.</p>
+              </div>
+              </div>
+              </div>
+            )
+        }
+    });
 
+//Footer Component
+    var Footer = React.createClass({
+        render: function(){
+            return(
+         <div className='container'>
+        <hr />
+      <footer className="navbar navbar-inverse">
+        <p>&copy; 2017 HighTech Inc &middot; All Rights Reserved</p>
+      </footer>
+         </div>
+            )
+        }
+    });
 
  //Main App Components
     var App = React.createClass({
@@ -90,7 +106,9 @@
             return(
          <div>
             <NavBar />,
-            <Jumbotron />
+            <Jumbotron />,
+            <PageHome />,
+            <Footer />
          </div>
             )
         }
@@ -98,13 +116,13 @@
         
 
 
-        ReactDOM.render(
-        <App />,
-          document.getElementById('app') 
-            
-        );
+ReactDOM.render(
+<App />,
+  document.getElementById('app') 
+
+);
         
-    </script>
-	</body>
-	</html>
+</script>
+</body>
+</html>
 	
