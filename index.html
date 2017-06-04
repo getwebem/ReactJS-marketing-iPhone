@@ -108,6 +108,29 @@
         }
     });
 
+
+ //About Component
+    var PageAbout = React.createClass({
+        render: function(){
+            return(
+         <div>
+          <div className='container'>
+              <div className="row">
+               <div className='col-md-8 col-md-offset-2'>
+           <h2 className='page-header'>About Us</h2>
+           <p>Angel investor founders buzz gamification marketing pitch first mover advantage. Prototype hackathon freemium backing research development deployment mass market stock market funding handshake. Series A financing product management churn rate ramen. Stock monetization traction. Business-to-consumer series A financing growth hacking mass market validation infrastructure technology traction. Infrastructure investor conversion supply chain focus iPad growth hacking android monetization pivot funding validation branding gen-z. Leverage buyer business plan low hanging fruit buzz. Paradigm shift angel investor customer business model canvas android technology seed round validation buzz virality disruptive funding direct mailing. Focus angel investor strategy sales monetization ownership backing venture iPad user experience. Buyer scrum project launch party sales growth hacking technology value proposition first mover advantage deployment.</p>
+         <p>Early adopters MVP direct mailing pivot niche market return on investment product management business-to-business graphical user interface validation freemium. Lean startup influencer partnership strategy business model canvas holy grail A/B testing low hanging fruit seed round innovator advisor business-to-consumer funding. Venture client angel investor business model canvas metrics social proof business-to-consumer. Marketing rockstar metrics user experience stock product management seed round. Learning curve graphical user interface network effects hackathon virality bootstrapping market pitch. Interaction design startup release partnership user experience responsive web design iPad marketing creative focus crowdfunding facebook holy grail. Investor first mover advantage series A financing learning curve social media seed money conversion paradigm shift. Buyer business model canvas focus channels seed money crowdsource interaction design learning curve disruptive iteration rockstar. Startup technology hypotheses paradigm shift responsive web design leverage user experience return on investment burn rate partner network mass market. Pivot ecosystem partnership investor launch party value proposition infographic advisor.</p>
+           <p>Traction customer strategy bandwidth launch party. Backing equity business-to-consumer direct mailing rockstar sales supply chain hackathon bootstrapping value proposition scrum project business plan low hanging fruit. Partnership metrics founders analytics paradigm shift crowdfunding influencer. Crowdsource low hanging fruit research  development backing ownership creative lean startup gen-z ecosystem hackathon facebook marketing innovator. Long tail supply chain prototype. Metrics analytics technology agile development sales learning curve prototype interaction design partnership. Infrastructure funding conversion crowdfunding. Social proof prototype market strategy iPad stealth early adopters learning curve infographic. Network effects investor ownership first mover advantage traction buyer value proposition success seed round funding. Research  development customer technology.</p>
+            </div>
+              </div>
+              </div>
+           </div>
+            )
+        }
+    });
+
+
+
  //Main App Components
     var App = React.createClass({
         getInitialState: function(){
@@ -126,6 +149,13 @@
             })
         },
         render: function(){
+            if(this.state.page == 'home'){
+                var jumbotron = <Jumbotron />
+                    var page = <PageHome />
+            } else if (this.state.page == 'about'){
+                var jumbotron = '';
+                var page = <PageAbout />
+            }
             return(
          <div>
             <NavBar 
@@ -133,8 +163,8 @@
             aboutClick={this.handleAboutClick}
             page={this.props.page}
             />,
-            <Jumbotron />,
-            <PageHome />,
+            {jumbotron}
+            {page}
             <Footer />
          </div>
             )
