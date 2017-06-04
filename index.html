@@ -18,15 +18,6 @@
 	</head>
 	<body>
 	<div id="app"></div>
-	
-    
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Marketing iPhone 7</h1>
-        <p>Social proof non-disclosure agreement twitter interaction design MVP user experience crowdfunding supply chain lean startup. Holy grail ecosystem business-to-business android innovator product management hypotheses responsive web design influencer series A financing lean startup research  development..</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
 
     <div class="container">
    
@@ -74,14 +65,39 @@
             }
         });
 
+
+    //Jumbotron Component
+     var Jumbotron = React.createClass({
+            render: function(){
+                return(
+                   
+    <div className="jumbotron">
+      <div className="container">
+        <h1>Marketing iPhone 7</h1>
+        <p>Social proof non-disclosure agreement twitter interaction design MVP user experience crowdfunding supply chain lean startup. Holy grail ecosystem business-to-business android innovator product management hypotheses responsive web design influencer series A financing lean startup research  development..</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+                )
+            }
+        });
+
+
+
+ //Main App Components
     var App = React.createClass({
         render: function(){
             return(
-            <NavBar />
+         <div>
+            <NavBar />,
+            <Jumbotron />
+         </div>
             )
         }
     });
         
+
+
         ReactDOM.render(
         <App />,
           document.getElementById('app') 
